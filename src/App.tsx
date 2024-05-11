@@ -1,6 +1,8 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import { CheckName } from './pages/CheckName';
+import { Register } from './pages/Register';
 import { Home } from './pages/Home';
+import "./App.css";
 
 export default function App() {
   return (
@@ -8,6 +10,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="check-name" element={<CheckName />} />
+          <Route path="register" element={<Register />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
@@ -24,6 +27,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/check-name">Check Name</Link>
+          </li>
+          <li>
+            <Link to="/register">Register User</Link>
           </li>
         </ul>
       </nav>

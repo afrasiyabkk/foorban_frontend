@@ -1,4 +1,4 @@
-interface ValidationError {
+export interface ValidationError {
   target?: object;
   property: string;
   value?: any;
@@ -31,3 +31,23 @@ interface BaseResponseError extends BaseResponseInteface {
 }
 
 export type BaseResponse = BaseResponseSuccess | BaseResponseError;
+
+
+export interface RegisterData {
+  name: string,
+  age: number | null,
+  married: string,
+  date_of_birth: Date | null,
+}
+
+interface registerResponseSuccess extends BaseResponseInteface {
+  success: true;
+  data: RegisterData;
+}
+
+interface registerResponseError extends BaseResponseInteface {
+  success: false;
+  errors: ValidationError[];
+}
+
+export type registerResponse = registerResponseSuccess | registerResponseError;

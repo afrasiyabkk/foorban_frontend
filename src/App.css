@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+input, select {
+  width: 500px;
+  padding: 6px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+select {
+  width: 520px
+}
+
+input:hover {
+  border: 2px solid green;
+}
+
+.message {
+  width: 510px;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  background-color: red;
+}
+
+.success-message {
+  background-color: green;
+}
